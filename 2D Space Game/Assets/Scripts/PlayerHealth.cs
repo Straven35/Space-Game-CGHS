@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int maxHealth = 100;
 	public int curHealth = 100;
-	//public Text FriendlyHealth;
+	public Text FriendlyHealth;
 
 	public Texture2D bgImage;
 	public Texture2D fgImage;
@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 
-		healthBarLength = Screen.width / 2;
+		healthBarLength = Screen.width / 4;
 
 	}
 	
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
 			SceneManager.LoadScene ("dead_test", LoadSceneMode.Single);
 		}
 
-		//FriendlyHealth.text = "Your health: " + curHealth;
+		FriendlyHealth.text = "Your health: " + curHealth;
 
 	}
 
@@ -54,6 +54,9 @@ public class PlayerHealth : MonoBehaviour {
 		{
 			AdjustCurrentHealth (-10);
 		}
+		if (col.gameObject.tag == "Pickup") {
+			AdjustCurrentHealth (+10);
+		}
 	}
 
 	public void AdjustCurrentHealth(int adj){
@@ -70,7 +73,7 @@ public class PlayerHealth : MonoBehaviour {
 			maxHealth = 1;
 
 
-		healthBarLength = (Screen.width / 2) * (curHealth / (float)maxHealth);
+		healthBarLength = (Screen.width / 4) * (curHealth / (float)maxHealth);
 
 	}
 }
