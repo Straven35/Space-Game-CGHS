@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int maxHealth = 100;
 	public int curHealth = 100;
-	public Text FriendlyHealth;
+	//public Text FriendlyHealth;
 
 	public Texture2D bgImage;
 	public Texture2D fgImage;
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour {
 			SceneManager.LoadScene ("dead_test", LoadSceneMode.Single);
 		}
 
-		FriendlyHealth.text = "Your health: " + curHealth;
+		//FriendlyHealth.text = "Your health: " + curHealth;
 
 	}
 
