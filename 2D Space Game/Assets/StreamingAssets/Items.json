@@ -2,11 +2,25 @@
 	{
 	"id": 0,
 	"title": "Gloves",
-	"value": 6
+	"value": 6,
+	"power": 1,
+	"defence": 2,
+	"vitality": 5,
+	"description": "Basic leather gloves.",
+	"stackable": false,
+	"rarity": 1,
+	"slug": "gloves"
 	},
 	{
 	"id": 1,
 	"title": "Cool Gloves",
-	"value": 12
+	"value": 12,
+	"power": 2,
+	"defence": 4,
+	"vitality": 10,
+	"description": "Cool leather gloves.",
+	"stackable": false,
+	"rarity": 2,
+	"slug": "cool_gloves"
 	}
 ]

@@ -6,14 +6,14 @@ public class EnemyHealth : MonoBehaviour {
 
 	public float maxHealth = 100;
 	public float curHealth = 100;
-	public Text Health;
+	//public Text Health;
 
 	void Update () {
 		if (curHealth == 0) {
 			Destroy (gameObject);
 		}
 
-		Health.text = "Health: " + curHealth;
+		//Health.text = "Health: " + curHealth;
 
 	}
 
